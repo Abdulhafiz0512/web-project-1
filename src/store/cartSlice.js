@@ -13,7 +13,7 @@ const cartSlice = createSlice({
       if (existingProduct) {
         existingProduct.quantity = action.payload.quan;
       } else {
-        state.cartItems.push({ ...product, id, quantity: 1 }); 
+        state.cartItems.push({ ...product, id, quantity: action.payload.quan }); 
       }
     
 
