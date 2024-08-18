@@ -1,0 +1,69 @@
+.check{
+   accent-color: #0BA42D;
+}
+.sidebar {
+    width: 300px;
+    
+    height:fit-content;   
+    background-color: white;
+    
+  }
+  
+  .filterSection {
+    margin-bottom: 16px;
+  }
+  
+  .filterSection h2 {
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    
+  }
+  
+  .colorFilter {
+    width: 164px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
+    gap: 8px;
+  }
+  .filterSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  ;
+  }
+  
+  
+  .filterSection li {
+    margin-bottom: 8px;
+  }
+  
+  .colorLabel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .colorCircle {
+    border: 0.5px solid black;
+    
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  
+  }
+  .colorCircle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .colorCircle.selected {
+    border: 2px solid #4299e1;
+    
+    transform: scale(1.2);
+  }
