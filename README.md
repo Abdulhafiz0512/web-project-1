@@ -2,16 +2,21 @@
 
 ## Till February 8
 - Formed a team consisting of **Muhammadayyub, Abdulhafiz, and Mahmud**.
-- Project Manager created a **Telegram group** for project discussions.
+- Mahmud created a **Telegram group** for project discussions.
 
 ## February 8
-- Project Manager proposed the idea of developing a game.
+- Mahmud proposed the idea of developing a game.
 - Team members reached an agreement on the project direction.
 
 ## February 10
 - Completed team formation by adding **Shohruhmirzo and Shernur**.
 - New team members were added to the Telegram group for coordination.
-- Project Manager assigned **roles** to all team members.
+- Mahmud became the **Project Manager**.
+- Project Manager assigned **roles** to all team members:
+  - **Abdulhafiz** - Frontend Developer
+  - **Muhammadayyub** - Tester
+  - **Shohruhmirzo** - Designer
+  - **Shernur** - Content Creator
 - **Game concept development** during an offline meeting between Frontend Developer and Project Manager:
   - **Frontend Developer's proposal:** A **strategic tower defense** game where players place and upgrade towers to defend their base against increasingly difficult waves of enemies.
   - **Project Manager's proposal:** A **shooter game** where players control a tank, navigating a maze-like battlefield, destroying enemy tanks.
