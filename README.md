@@ -1,7 +1,7 @@
 # Project Development Timeline
 
 ### till February 8
-- Formed a team with Muhammadayyub, Abdulhafiz, and Mahmud.
+- The team with Muhammadayyub, Abdulhafiz, and Mahmud was formed.
 - Project Manager opened a Telegram group to discuss the project.
 
 ### February 8
