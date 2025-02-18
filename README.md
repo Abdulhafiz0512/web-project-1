@@ -33,3 +33,7 @@
 ### February 18
 - Transferred project development to Abdulhafiz's GitHub repository.
 - All team members received collaborator access from Abdulhafiz.
+- Assigned **Shohruhmirzo (Designer)** to create designs for five different pages of the app.
+- Assigned **Shernur (Content Creator)** to write text for five different pages of the app.
+- Instructed **Muhammadayyub (Tester)** to start writing test files.
+- Instructed **Abdulhafiz (Frontend Developer)** to develop the checkout process and other necessary parts of the app.
