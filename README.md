@@ -18,5 +18,18 @@
   - ***Final decision:*** Merged both ideas into a single game concept.
 
 ### February 13
-- Added team members to the github repository
-- Instructed team members how to make new branches and merge them
+- Added team members to the github repository.
+- Instructed team members how to make new branches and merge them.
+
+### February 15
+- Encountered challenges in game development.
+- Decided to halt game development due to complexity and feasibility concerns.
+
+### February 17
+- Held a team discussion to reconsider the project direction.
+- Agreed on developing an e-commerce web app instead.
+- Created the initial version of the e-commerce web application.
+
+### February 18
+- Transferred project development to Abdulhafiz's GitHub repository.
+- All team members received collaborator access from Abdulhafiz.
