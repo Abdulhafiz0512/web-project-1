@@ -1,5 +1,3 @@
-# TASKS.md
-
 ## Task: Design Web Pages
 
 ### Overview
