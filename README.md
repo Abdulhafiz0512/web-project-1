@@ -21,8 +21,11 @@
   - **Frontend Developer's proposal:** A **strategic tower defense** game where players place and upgrade towers to defend their base against increasingly difficult waves of enemies.
   - **Project Manager's proposal:** A **shooter game** where players control a tank, navigating a maze-like battlefield, destroying enemy tanks.
   - **Final decision:** Merged both ideas into a single game concept.
+- Frontend Developer developed a draft and later the first versions of the game on his **GitHub repository**, deploying it to free hosting.
+- Project Manager played the game and provided feedback to the Frontend Developer.
 
 ## February 13
+- Frontend Developer developed further features and shared progress.
 - Project Manager created a **GitHub repository** for game development.
 - All team members received **collaborator access**.
 - Project Manager instructed team members on **branch creation and merging**.
