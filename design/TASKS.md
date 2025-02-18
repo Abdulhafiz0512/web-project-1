@@ -1,4 +1,4 @@
-## Task: Design Web Pages | Shernur | February 18
+## Task: Design Web Pages | February 18
 
 ### Overview
 Your task is to design the following pages for our web application:
