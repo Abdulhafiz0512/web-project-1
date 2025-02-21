@@ -42,7 +42,11 @@ const ProductDetails = () => {
   return (
     <div className={styles.productDetails}>
       <div className={styles.breadcrumb}>
+<<<<<<< HEAD
         <span>Categories / <a href="/">Gaming Headsets & Audio</a> / </span>
+=======
+        <span>Products / Gaming Headsets & Audio / </span>
+>>>>>>> 0ed3ed9b4096a3c00e2dae16dc4b50ed1a48f0b8
         <span className={styles.productName}>{product.name}</span>
       </div>
 
