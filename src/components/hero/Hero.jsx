@@ -4,8 +4,7 @@ export default function Hero() {
   return (
     <div className={styles.banner}>
       <div className={styles.container}>
-      <p>/ Start / Categories 
-     <br />/ Headphones and audio for gaming</p> 
+      <p> Categories / Headphones and audio for gaming</p> 
      <h1>HEADPHONES AND AUDIO
      <br />FOR GAMING</h1>
       </div>
