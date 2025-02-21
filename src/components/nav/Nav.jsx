@@ -8,12 +8,21 @@ export default function Nav() {
       <div className={style.container}>
         <Link to={"/"}> <img src="/assets/icons/GameGeek.svg" alt="" /></Link>
         <ul className={style.links}>
+<<<<<<< HEAD
+          <li><a href="/">Categories</a></li>
+          <li><a href="/brands">Brands</a></li>
+          <li><a href="/new">What's new</a></li>
+          <li><a href="/sales">Sales</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/about">About</a></li>
+=======
           <li>Categories</li>
           <li>Brands</li>
           <li>What's new</li>
           <li>Sales</li>
           <li>Help</li>
           <li>About</li>
+>>>>>>> 0ed3ed9b4096a3c00e2dae16dc4b50ed1a48f0b8
         </ul>
         <div className={style.btns}>
           <img src="/assets/icons/fi-bs-search.svg" alt="" />
