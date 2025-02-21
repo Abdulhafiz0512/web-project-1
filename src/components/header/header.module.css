@@ -1,7 +1,6 @@
 header {
   
   
-<<<<<<< HEAD
   background-color: #0d2613;
   
   
@@ -25,79 +24,12 @@ header {
   gap: 17px;
 }
 .cell p {
-=======
-    background-color: #0d2613;
-    
-    
-  }
-  .container{
-      height: 70px;
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-  
-  .cell {
-    display: flex;
-    gap: 17px;
-  }
-  .cell p {
-    font-family: "Inter";
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16.94px;
-    text-align: left;
-    color: white;
-  }
-  
-  .ads {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-  .ads p {
-    font-family: "Inter";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.94px;
-    text-align: left;
-    color: white;
-  }
-  .green_line{
-      width: 2px;
-  height: 30px;
-  
-  background: #14FF00;
-  
-  }
-  
-  .end{
-      display: flex;
-      gap: 44px;
-  }
-  .sel{
-      display: flex;
-      gap: 11px;
-      align-items: center;
-  }
-  .sel select{
-  background-color: transparent;
-  border: none;
->>>>>>> 0ed3ed9b4096a3c00e2dae16dc4b50ed1a48f0b8
   font-family: "Inter";
   font-size: 14px;
   font-weight: 500;
   line-height: 16.94px;
   text-align: left;
   color: white;
-<<<<<<< HEAD
 }
 
 .ads {
@@ -156,23 +88,3 @@ text-align: left;
 color: white;
 }
 
-=======
-  
-      }
-  
-  .loc{
-      display: flex;
-      align-items: center;
-      gap: 8px;
-  }
-  .loc p {
-      font-family: "Inter";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16.94px;
-  text-align: left;
-  color: white;
-  }
-  
-  
->>>>>>> 0ed3ed9b4096a3c00e2dae16dc4b50ed1a48f0b8
