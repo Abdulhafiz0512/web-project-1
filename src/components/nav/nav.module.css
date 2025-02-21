@@ -1,5 +1,4 @@
 nav {
-<<<<<<< HEAD
   margin-bottom: 10px;
 }
 
@@ -37,43 +36,3 @@ nav {
   width: 100%; /* This ensures it matches the width of .containerWrapp*/
   border: 2px solid #e9e7e7;
 }
-=======
-    margin-bottom: 10px;
-  }
-  
-  .containerWrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-  
-    align-items: center;
-  }
-  .container li {
-    font-family: "Inter";
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: left;
-  }
-  .container {
-    height: 108px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .links {
-    display: flex;
-    gap: 40px;
-  }
-  
-  .btns {
-    display: flex;
-    gap: 42px;
-  }
-  
-  .under {
-    width: 100%; /* This ensures it matches the width of .containerWrapp*/
-    border: 2px solid #e9e7e7;
-  }
-  
->>>>>>> 0ed3ed9b4096a3c00e2dae16dc4b50ed1a48f0b8
