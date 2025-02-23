@@ -1,0 +1,444 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero {
+  height: 769px;
+
+  position: relative;
+  text-align: left;
+  padding: 4rem 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../../../public/assets/Images/brands.png");
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 1180px;
+  margin-left: 2rem;
+}
+
+.heroTitle {
+  font-family: "Hammersmith One";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: 0%;
+  color: #14ff00;
+  filter: hue-rotate(-10deg) brightness(1.2);
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-family: "Hammersmith One";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: 0%;
+  color: #14ff00;
+  filter: hue-rotate(-10deg) brightness(1.2);
+  margin: 0;
+}
+
+.heroText {
+  font-family: "Readex Pro";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+}
+
+.shopButton {
+  width: 293px;
+  background-color: #00ff00;
+  color: white;
+  padding: 0.7rem 2.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+  margin-top: 31px;
+}
+
+.features {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureItem {
+  display: flex;
+  gap: 27px;
+  margin-bottom: 0.75rem;
+  font-family: "Hammersmith One";
+  font-weight: 400;
+  font-size: 22px;
+
+  line-height: 27.5px;
+  letter-spacing: 0%;
+}
+
+.checkmark {
+  color: #00ff00;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.newsSection {
+  padding: 3.5rem 2rem;
+  background-color: #0d2612;
+  text-align: center;
+  height: 802px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2.5rem;
+  font-family: "Hammersmith One";
+}
+
+.newsGrid {
+  display: grid;
+  width: 1180px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  gap: 67px;
+}
+
+.newsItem {
+  width: 322px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsImage {
+  width: 100%;
+  height: 322px;
+
+  object-fit: cover;
+}
+
+.newsTitle {
+  font-family: "Hammersmith One";
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 28.75px;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.newsText {
+  font-family: "Readex Pro";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+}
+
+.seeMore {
+  font-family: "Readex Pro";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: white;
+  text-decoration-thickness: Auto;
+}
+
+@media (max-width: 768px) {
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .heroContent {
+    margin-left: 0;
+  }
+}
+
+.trendingSection {
+  background-color: #0d2612;
+  padding: 40px 0;
+}
+
+.tabContainer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e1f7e5;
+  gap: 30px;
+}
+
+.tabButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 18px;
+  padding: 15px 30px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.activeTab {
+  color: #14ff00;
+}
+
+.tabIndicator {
+  position: relative;
+  height: 3px;
+  width: 436px;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  width: 33.33%;
+  background-color: #14ff00;
+  transition: left 0.3s ease;
+}
+
+/* Products Grid */
+.productsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.productsGrid {
+  display: flex;
+  gap: 33px;
+  justify-content: center;
+  max-width: 1180px;
+}
+
+.productCard {
+  width: 235px;
+  text-align: center;
+}
+
+.productImageContainer {
+  background-color: white;
+  height: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.productImage {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.productName {
+  font-family: "Readex Pro";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.productPrice {
+  font-family: "Readex Pro";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+/* Navigation Buttons */
+.navButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.navArrow {
+  font-size: 20px;
+}
+
+/* Pagination Dots */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #555;
+  display: inline-block;
+}
+
+.activeDot {
+  background-color: #14ff00;
+}
+
+@media (max-width: 1200px) {
+  .productsGrid {
+    overflow-x: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    justify-content: center;
+  }
+
+  .tabButton {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .productsGrid {
+    flex-wrap: wrap;
+  }
+}
+.joinUsBanner {
+  position: relative;
+  height: 518px;
+  background-image: url("./../../../public/assets/Images/brands.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+
+.joinUsOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.joinUsContent {
+  position: relative;
+  z-index: 2;
+  padding-left: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Hammersmith One";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 75px;
+  letter-spacing: 0%;
+  color: white;
+}
+
+
+
+.joinUsHighlight {
+  color: #14ff00;
+}
+
+.joinButton {
+  background-color: #14ff00;
+  color: white;
+  width: 300px;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.joinButton:hover {
+  background-color: #0ee000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .joinUsBanner {
+    height: 280px;
+  }
+
+  .joinUsContent {
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .joinUsTitle {
+    font-size: 32px;
+  }
+}
