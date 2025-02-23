@@ -1,0 +1,133 @@
+.helpContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: "Readex Pro", sans-serif;
+  }
+  
+  .helpTitle {
+    font-size: 2rem;
+    color: #13700b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Hammersmith One", sans-serif;
+  }
+  
+  .helpText {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .faqSection {
+    margin-bottom: 40px;
+  }
+  
+  .faqTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #13700b;
+  }
+  
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faqItem {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .contactSection {
+    text-align: center;
+  }
+  
+  .contactTitle {
+    font-size: 1.5rem;
+    color: #13700b;
+    margin-bottom: 10px;
+  }
+  
+  .contactText {
+    margin-bottom: 20px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .inputField {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .textArea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .contactButton {
+    background-color: #13700b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 150px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #13700b;
+  }
+  
+  @media (max-width: 768px) {
+    .helpContainer {
+      padding: 15px;
+    }
+  
+    .helpTitle {
+      font-size: 1.5rem;
+    }
+  
+    .faqTitle,
+    .contactTitle {
+      font-size: 1.25rem;
+    }
+  
+    .formRow {
+      flex-direction: column;
+    }
+  
+    .inputField,
+    .contactButton {
+      width: 100%;
+    }
+  }
+  

@@ -1,9 +1,110 @@
-import React from 'react'
+import React, { useState } from "react";
+import styles from "./help.module.css";
 
-export default function Help() {
+const Help = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    comment: "",
+    countryCode: "+998"
+  });
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setShowSuccessMessage(true);
+    setTimeout(() => setShowSuccessMessage(false), 3000);
+  };
+
   return (
-    <div>
-      
+    <div className={styles.helpContainer}>
+      <h2 className={styles.helpTitle}>Need Help?</h2>
+      <p className={styles.helpText}>We're here to assist you with anything you need. Explore the topics below or contact our support team directly.</p>
+
+      <div className={styles.faqSection}>
+        <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
+        <ul className={styles.faqList}>
+          <li className={styles.faqItem}><strong>How do I track my order?</strong><br />You can track your order by logging into your account and visiting the 'Orders' section.</li>
+          <li className={styles.faqItem}><strong>What is your return policy?</strong><br />We offer a 30-day return policy on all items. Please check our returns page for more details.</li>
+          <li className={styles.faqItem}><strong>How do I contact customer support?</strong><br />You can reach out to us via the 'Contact Us' page or email us directly at support@headphonestore.com.</li>
+        </ul>
+      </div>
+
+      <div className={styles.contactSection}>
+        <h3 className={styles.contactTitle}>Still need help?</h3>
+        <p className={styles.contactText}>Our support team is available Monday to Friday from 9 AM to 6 PM.</p>
+        <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <div className={styles.formRow}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              className={styles.inputField}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleChange}
+              className={styles.inputField}
+              required
+            />
+          </div>
+          <div className={styles.formRow}>
+            <select
+              name="countryCode"
+              value={formData.countryCode}
+              onChange={handleChange}
+              className={styles.countryCodeSelect}
+            >
+              <option value="+998">+998 (Uzbekistan)</option>
+              <option value="+1">+1 (USA)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+49">+49 (Germany)</option>
+              <option value="+33">+33 (France)</option>
+              <option value="+91">+91 (India)</option>
+              <option value="+81">+81 (Japan)</option>
+              <option value="+61">+61 (Australia)</option>
+              <option value="+86">+86 (China)</option>
+            </select>
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone number"
+              value={formData.phone}
+              onChange={handleChange}
+              className={styles.inputField}
+            />
+          </div>
+          <textarea
+            name="comment"
+            placeholder="Comment"
+            value={formData.comment}
+            onChange={handleChange}
+            className={styles.textArea}
+          />
+          <button type="submit" className={styles.contactButton}>Send</button>
+        </form>
+
+        {showSuccessMessage && (
+          <div className={styles.successMessage}>
+            ✓ Message Sent
+          </div>
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Help;
