@@ -34,7 +34,7 @@ const Help = () => {
         <ul className={styles.faqList}>
           <li className={styles.faqItem}><strong>How do I track my order?</strong><br />You can track your order by logging into your account and visiting the 'Orders' section.</li>
           <li className={styles.faqItem}><strong>What is your return policy?</strong><br />We offer a 30-day return policy on all items. Please check our returns page for more details.</li>
-          <li className={styles.faqItem}><strong>How do I contact customer support?</strong><br />You can reach out to us via the 'Contact Us' page or email us directly at support@headphonestore.com.</li>
+          <li className={styles.faqItem}><strong>How do I contact customer support?</strong><br />You can reach out to us via  directly at support@gamegeek.com.</li>
         </ul>
       </div>
 
