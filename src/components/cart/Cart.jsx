@@ -119,10 +119,12 @@ const Cart = () => {
                 .toFixed(2)}
             </span>
           </p>
-          <button className={styles.checkoutBtn}>PROCEED TO CHECKOUT</button>
-          <button onClick={handleClearCart} className={styles.checkoutBtn}>
-            CLEAR CART
-          </button>
+          {
+            cartItems.length>0 ? <button className={styles.checkoutBtn}>PROCEED TO CHECKOUT</button> : null
+          }
+          {
+            cartItems.length>0 ? <button onClick={handleClearCart} className={styles.checkoutBtn}>CLEAR CART</button> : null
+          }
           <div className={styles.last}>
             <button
               className={styles.backToShopping}
