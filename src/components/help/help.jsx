@@ -11,6 +11,8 @@ const Help = () => {
   });
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isPhoneValid, setIsPhoneValid] = useState(true);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,9 +21,26 @@ const Help = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setShowSuccessMessage(true);
-    setTimeout(() => setShowSuccessMessage(false), 3000);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /[-.\s]?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{2}[-.\s]?[0-9]{2}$/
+    if (emailRegex.test(formData.email) && (formData.phone==="" || phoneRegex.test(formData.phone))) {
+      console.log("Form submitted:", formData);
+      setIsEmailValid(true);
+      setIsPhoneValid(true);
+      formData.name=""
+      formData.email=""
+      formData.phone=""
+      formData.comment=""
+      setShowSuccessMessage(true);
+      setTimeout(() => setShowSuccessMessage(false), 3000);
+    }
+    else{
+      console.log("Form is invalid:", formData);
+      setShowSuccessMessage(false);
+      if(emailRegex.test(formData.email))setIsEmailValid(false);
+      if(formData.phone==="" || phoneRegex.test(formData.phone))setIsPhoneValid(false);
+      setTimeout(() => setShowSuccessMessage(false), 3000);
+    }
   };
 
   return (
@@ -57,7 +76,7 @@ const Help = () => {
               placeholder="Email *"
               value={formData.email}
               onChange={handleChange}
-              className={styles.inputField}
+              className={isEmailValid ? styles.inputField : styles.invalidInput}
               required
             />
           </div>
@@ -84,23 +103,30 @@ const Help = () => {
               placeholder="Phone number"
               value={formData.phone}
               onChange={handleChange}
-              className={styles.inputField}
+              className={isPhoneValid ? styles.inputField : styles.invalidInput}
             />
           </div>
           <textarea
             name="comment"
-            placeholder="Comment"
+            placeholder="Comment *"
             value={formData.comment}
             onChange={handleChange}
             className={styles.textArea}
+            required
           />
           <button type="submit" className={styles.contactButton}>Send</button>
         </form>
 
         {showSuccessMessage && (
-          <div className={styles.successMessage}>
-            ✓ Message Sent
-          </div>
+            <div className={styles.successMessage}>
+              ✓ Message Sent. Our Operators Will Reach Out To You Soon!
+            </div>
+        )}
+
+        {(!isEmailValid || ! isPhoneValid) && (
+            <div className={styles.failMessage}>
+               Form Is Invalid
+            </div>
         )}
       </div>
     </div>
