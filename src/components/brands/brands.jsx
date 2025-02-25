@@ -10,26 +10,26 @@ const Brands = () => {
     {
       id: 1,
       name: "LOGITECH GAMING HEADSET",
-      price: "99,99 €",
-      image: "/assets/Images/items5.png"
+      price: "99,99 $",
+      image: "/assets/Images/items.png"
     },
     {
       id: 2,
       name: "CHAIR GAMING MGCPROFBL GAMING",
-      price: "149,90 €",
-      image: "/assets/Images/items.png"
+      price: "149,90 $",
+      image: "/assets/Images/items2.png"
     },
     {
       id: 3,
       name: "MANDO MICROSOFT XBOX CONTROLLER",
-      price: "54,99 €",
-      image: "/assets/Images/items2.png"
+      price: "54,99 $",
+      image: "/assets/Images/items3.png"
     },
     {
       id: 4,
       name: "PC GAMING NEOHEO105 NEOPC",
-      price: "899,99 €",
-      image: "/assets/Images/items3.png"
+      price: "899,99 $",
+      image: "/assets/Images/items4.png"
     }
   ];
   return (
@@ -121,32 +121,6 @@ const Brands = () => {
       <section className={styles.trendingSection}>
         <div className={styles.container}>
           <div className={styles.tabContainer}>
-            <div className={styles.tabs}>
-              <button
-                className={`${styles.tabButton} ${
-                  activeTab === "TRENDING" ? styles.activeTab : ""
-                }`}
-                onClick={() => setActiveTab("TRENDING")}
-              >
-                TRENDING
-              </button>
-              <button
-                className={`${styles.tabButton} ${
-                  activeTab === "NEW" ? styles.activeTab : ""
-                }`}
-                onClick={() => setActiveTab("NEW")}
-              >
-                NEW
-              </button>
-              <button
-                className={`${styles.tabButton} ${
-                  activeTab === "POPULAR" ? styles.activeTab : ""
-                }`}
-                onClick={() => setActiveTab("POPULAR")}
-              >
-                POPULAR
-              </button>
-            </div>
             <div className={styles.tabIndicator}>
               <div
                 className={styles.activeIndicator}
@@ -164,9 +138,6 @@ const Brands = () => {
 
 
           <div className={styles.productsContainer}>
-            <button className={styles.navButton} aria-label="Previous">
-              <span className={styles.navArrow}>&#10094;</span>
-            </button>
 
 
             <div className={styles.productsGrid}>
@@ -185,18 +156,8 @@ const Brands = () => {
               ))}
             </div>
 
-
-            <button className={styles.navButton} aria-label="Next">
-              <span className={styles.navArrow}>&#10095;</span>
-            </button>
           </div>
 
-
-          <div className={styles.pagination}>
-            <span className={`${styles.dot} ${styles.activeDot}`}></span>
-            <span className={styles.dot}></span>
-            <span className={styles.dot}></span>
-          </div>
         </div>
       </section>
       <section className={styles.joinUsBanner}>
