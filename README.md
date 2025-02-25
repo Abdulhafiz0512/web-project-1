@@ -14,21 +14,21 @@
 - Mahmud became the **Project Manager**.
 - Project Manager assigned **roles** to all team members:
   - **Abdulhafiz** - Frontend Developer
-  - **Muhammadayyub** - Tester
+  - **Muhammadayyub** - QA Engineer
   - **Shohruhmirzo** - Designer
   - **Shernur** - Content Creator
 - **Game concept development** during an offline meeting between Frontend Developer and Project Manager:
   - **Frontend Developer's proposal:** A **strategic tower defense** game where players place and upgrade towers to defend their base against increasingly difficult waves of enemies.
   - **Project Manager's proposal:** A **shooter game** where players control a tank, navigating a maze-like battlefield, destroying enemy tanks.
   - **Final decision:** Merged both ideas into a single game concept.
-- Frontend Developer developed a draft and later the first versions of the game on his **GitHub repository**, deploying it to free hosting.
-- Project Manager played the game and provided feedback to the Frontend Developer.
+- **Frontend Developer** developed a draft and later the first versions of the game on his **GitHub repository**, deploying it to free hosting.
+- **Project Manager** played the game and provided feedback to the **Frontend Developer**.
 
 ## February 13
-- Frontend Developer developed further features and shared progress.
-- Project Manager created a **GitHub repository** for game development.
+- **Frontend Developer** developed further features and shared progress.
+- **Project Manager** created a **GitHub repository** for game development.
 - All team members received **collaborator access**.
-- Project Manager instructed team members on **branch creation and merging**.
+- **Project Manager** instructed team members on **branch creation and merging**.
 
 ## February 15
 - **Frontend Developer encountered challenges** in game development.
@@ -44,7 +44,20 @@
 - Project development was transferred to the **Frontend Developer's GitHub repository**.
 - All team members received **collaborator access**.
 - **Project Manager assigned tasks**:
-  - **Shohruhmirzo (Designer):** Create designs for **five different pages** of the app.
-  - **Shernur (Content Creator):** Write text for **five different pages** of the app.
-  - **Muhammadayyub (Tester):** Start writing **test files**.
-  - **Abdulhafiz (Frontend Developer):** Develop the **checkout process** and other essential parts of the app.
+  - **Designer:** Create designs for **five different pages** of the app.
+  - **Content Creator:** Write text for **five different pages** of the app.
+  - **QA Engineer:** Start writing **test files**.
+  - **Frontend Developer:** Develop the **checkout process** and other essential parts of the app.
+
+## February 20
+- **Project Manager assigned tasks**:
+  - **Designer:** Develop Brands, What's New pages.
+  - **Content Creator:** Develop Sales, Help pages.
+
+## February 23
+- **Designer** uploaded design images and developed the Brands page.
+- **Content Creator** developed the Help page.
+
+## February 25
+- **QA Engineer** reviewed the entire project, identified key missing elements, and assigned missing tasks to **Frontend Developer**, **Designer**, and **Project Manager**.
+- **QA Engineer** developed test files.
