@@ -22,34 +22,18 @@ const Sales = () => {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart({
-      id: product.id,
-      name: product.name,
-      price: parseFloat(product.newPrice.replace(',', '.')),
-      image_url: product.image,
-      quantity: 1,
-      brand_name: "Gaming Brand",
-      color_options: []
-    }));
-  };
-
-  const scrollToSales = () => {
-    salesSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const discountedProducts = [
-    { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "$ 99,99", newPrice: "$ 79,99", discount: "20%", image: "/assets/Images/items5.png" },
-    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "$ 149,90", newPrice: "$ 119,90", discount: "20%", image: "/assets/Images/items.png" },
-    { id: 3, name: "MANDO XBOX CONTROLLER", oldPrice: "$ 54,99", newPrice: "$ 44,99", discount: "18%", image: "/assets/Images/items2.png" },
-    { id: 4, name: "PC GAMING NEOHEO105", oldPrice: "$ 899,99", newPrice: "$ 799,99", discount: "11%", image: "/assets/Images/items3.png" }
+    { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "$ 99,99", newPrice: "$ 79,99", discount: "20%", image: "/assets/Images/items.png", info: "High-quality sound with noise-canceling mic." },
+    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "$ 149,90", newPrice: "$ 119,90", discount: "20%", image: "/assets/Images/items2.png", info: "Ergonomic design for long gaming sessions." },
+    { id: 3, name: "MANDO XBOX CONTROLLER", oldPrice: "$ 54,99", newPrice: "$ 44,99", discount: "18%", image: "/assets/Images/items3.png", info: "Wireless controller with responsive buttons." },
+    { id: 4, name: "PC GAMING NEOHEO105", oldPrice: "$ 899,99", newPrice: "$ 799,99", discount: "11%", image: "/assets/Images/items4.png", info: "High-performance gaming PC with RTX graphics." }
   ];
 
   const moreDeals = [
-    { id: 5, name: "GAMING KEYBOARD RGB", oldPrice: "$ 69,99", newPrice: "$ 49,99", discount: "29%", image: "/assets/Images/items6.png" },
-    { id: 6, name: "GAMING MOUSE PRO", oldPrice: "$ 59,99", newPrice: "$ 39,99", discount: "33%", image: "/assets/Images/items7.png" },
-    { id: 7, name: "ULTRA HD GAMING MONITOR", oldPrice: "$ 399,99", newPrice: "$ 349,99", discount: "13%", image: "/assets/Images/items8.png" },
-    { id: 8, name: "GAMING DESK SETUP", oldPrice: "$ 499,99", newPrice: "$ 429,99", discount: "14%", image: "/assets/Images/items9.png" }
+    { id: 5, name: "GAMING KEYBOARD RGB", oldPrice: "$ 69,99", newPrice: "$ 49,99", discount: "29%", image: "/assets/Images/items6.png", info: "Mechanical keyboard with customizable RGB lighting." },
+    { id: 6, name: "GAMING MOUSE PRO", oldPrice: "$ 59,99", newPrice: "$ 39,99", discount: "33%", image: "/assets/Images/items7.png", info: "Precision gaming mouse with adjustable DPI." },
+    { id: 7, name: "ULTRA HD GAMING MONITOR", oldPrice: "$ 399,99", newPrice: "$ 349,99", discount: "13%", image: "/assets/Images/items8.png", info: "4K resolution monitor with 144Hz refresh rate." },
+    { id: 8, name: "GAMING DESK SETUP", oldPrice: "$ 499,99", newPrice: "$ 429,99", discount: "14%", image: "/assets/Images/items9.png", info: "Spacious desk setup designed for gamers." }
   ];
 
   return (
@@ -57,7 +41,7 @@ const Sales = () => {
       <section className={styles.heroSection}>
         <h1 className={styles.heroTitle}>BIG SALE! UP TO 50% OFF</h1>
         <p className={styles.heroSubtitle}>Grab your favorite gaming gear at unbeatable prices.</p>
-        <button className={styles.shopNowButton} onClick={scrollToSales}>Shop Now</button>
+        <button className={styles.shopNowButton} onClick={() => salesSectionRef.current.scrollIntoView({ behavior: 'smooth' })}>Shop Now</button>
       </section>
 
       <section className={`${styles.salesSection} ${styles.scrollAnimation}`} ref={salesSectionRef}>
@@ -74,7 +58,7 @@ const Sales = () => {
               <h3 className={styles.productName}>{product.name}</h3>
               <p className={styles.oldPrice}>{product.oldPrice}</p>
               <p className={styles.newPrice}>{product.newPrice}</p>
-              <button className={styles.buyNowButton} onClick={() => handleAddToCart(product)}>Buy Now</button>
+              <p className={styles.productInfo}>{product.info}</p>
             </div>
           ))}
         </div>
@@ -90,7 +74,7 @@ const Sales = () => {
                 <h3 className={styles.productName}>{product.name}</h3>
                 <p className={styles.oldPrice}>{product.oldPrice}</p>
                 <p className={styles.newPrice}>{product.newPrice}</p>
-                <button className={styles.buyNowButton} onClick={() => handleAddToCart(product)}>Buy Now</button>
+                <p className={styles.productInfo}>{product.info}</p>
               </div>
             ))}
           </div>
