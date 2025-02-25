@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import styles from "./sales.module.css";
@@ -7,6 +7,7 @@ const Sales = () => {
   const [timeLeft, setTimeLeft] = useState(3600);
   const [showMoreDeals, setShowMoreDeals] = useState(false);
   const dispatch = useDispatch();
+  const salesSectionRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,14 +26,17 @@ const Sales = () => {
     dispatch(addToCart({
       id: product.id,
       name: product.name,
-      price: parseFloat(product.newPrice.replace(',', '.')), 
+      price: parseFloat(product.newPrice.replace(',', '.')),
       image_url: product.image,
       quantity: 1,
-      brand_name: "Gaming Brand", 
+      brand_name: "Gaming Brand",
       color_options: []
     }));
   };
-  
+
+  const scrollToSales = () => {
+    salesSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const discountedProducts = [
     { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "99,99 €", newPrice: "79,99 €", discount: "20%", image: "/assets/Images/items5.png" },
@@ -53,10 +57,10 @@ const Sales = () => {
       <section className={styles.heroSection}>
         <h1 className={styles.heroTitle}>BIG SALE! UP TO 50% OFF</h1>
         <p className={styles.heroSubtitle}>Grab your favorite gaming gear at unbeatable prices.</p>
-        <button className={styles.shopNowButton}>Shop Now</button>
+        <button className={styles.shopNowButton} onClick={scrollToSales}>Shop Now</button>
       </section>
 
-      <section className={styles.salesSection}>
+      <section className={`${styles.salesSection} ${styles.scrollAnimation}`} ref={salesSectionRef}>
         <h2 className={styles.sectionTitle}>Limited-Time Deals</h2>
         <p className={styles.timer}>Hurry! Sale ends in: {formatTime(timeLeft)}</p>
 
