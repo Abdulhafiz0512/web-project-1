@@ -120,7 +120,7 @@ GameGeek/
 - Click "Proceed to Checkout" (currently inactive).
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the License.
 
 ## Contact
 For any inquiries, reach out via:
