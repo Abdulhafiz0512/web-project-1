@@ -41,11 +41,11 @@ GameGeek/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/gamegeek.git
+   git clone https://github.com/Abdulhafiz0512/web-project-1
    ```
 2. Navigate to the project folder:
    ```bash
-   cd gamegeek
+   cd web-project-1
    ```
 3. Install dependencies:
    ```bash
@@ -66,16 +66,10 @@ GameGeek/
 - Click "Clear Cart" to empty the cart.
 - Click "Proceed to Checkout" (currently inactive).
 
-## Future Improvements
-- Implement a backend to store cart data persistently.
-- Enhance checkout functionality.
-- Improve UI/UX with additional animations and interactive elements.
-
 ## License
 This project is licensed under the MIT License.
 
 ## Contact
 For any inquiries, reach out via:
 - **Phone:** +4904-049-950
-- **Website:** [GameGeek](https://your-website-link.com)
 - **Social Media:** Twitter | LinkedIn | Facebook | Instagram
