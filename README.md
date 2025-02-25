@@ -79,8 +79,3 @@ For any inquiries, reach out via:
 - **Phone:** +4904-049-950
 - **Website:** [GameGeek](https://your-website-link.com)
 - **Social Media:** Twitter | LinkedIn | Facebook | Instagram
-
-## February 25
-- **QA Engineer** reviewed the entire project, identified key missing elements, and assigned missing tasks to **Frontend Developer**, **Designer**, and **Project Manager**.
-- **QA Engineer** developed test files.
-- **Project Manger** developed About page and project documentation
