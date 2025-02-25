@@ -30,6 +30,7 @@ const Cart = () => {
 
   const handleClearCart = () => {
     dispatch(clearCart());
+    backToShopping();
   };
 
   return (
