@@ -61,4 +61,6 @@
 ## February 25
 - **QA Engineer** reviewed the entire project, identified key missing elements, and assigned missing tasks to **Frontend Developer**, **Designer**, and **Project Manager**.
 - **QA Engineer** developed test files.
-- **Project Manger** developed About page and project documentation
+- **Project Manger** developed About page.
+- **Project Manger** developed project documentation.
+- **Content Creator** developed the Sales page.
