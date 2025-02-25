@@ -57,3 +57,8 @@
 ## February 23
 - **Designer** uploaded design images and developed the Brands page.
 - **Content Creator** developed the Help page.
+
+## February 25
+- **QA Engineer** reviewed the entire project, identified key missing elements, and assigned missing tasks to **Frontend Developer**, **Designer**, and **Project Manager**.
+- **QA Engineer** developed test files.
+- **Project Manger** developed About page and project documentation
