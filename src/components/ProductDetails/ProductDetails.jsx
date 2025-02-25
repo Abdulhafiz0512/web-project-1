@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const products = useSelector((state) => state.headphones.products);
   const [buttonText, setButtonText] = useState("Add to Cart");
   const [isAdded, setIsAdded] = useState(false);
-  const product = products.find((prod) => prod.id == parseInt(id));
+  const product = products.find((prod) => prod.id === parseInt(id));
   const [quantity, setQuantity] = useState(1);
 
   if (!product) {

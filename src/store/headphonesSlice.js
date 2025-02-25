@@ -23,7 +23,11 @@ const headphonesSlice = createSlice({
       state.products = action.payload;
     },
     toggleColor: (state, action) => {
-      state.selectedColors = [action.payload]
+      if (state.selectedColors.includes(action.payload)) {
+        state.selectedColors = state.selectedColors.filter(color => color !== action.payload);
+      } else {
+        state.selectedColors.push(action.payload);
+      }
     },
     toggleBrand: (state, action) => {
       if (state.selectedBrands.includes(action.payload)) {
