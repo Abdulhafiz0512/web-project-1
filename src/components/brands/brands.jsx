@@ -17,7 +17,7 @@ const Brands = () => {
       id: 2,
       name: "CHAIR GAMING MGCPROFBL GAMING",
       price: "149,90 $",
-      image: "/assets/Images/items2.png"
+      image: "/assets/Images/items5.png"
     },
     {
       id: 3,

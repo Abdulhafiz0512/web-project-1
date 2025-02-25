@@ -24,7 +24,7 @@ const Sales = () => {
 
   const discountedProducts = [
     { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "$ 99,99", newPrice: "$ 79,99", discount: "20%", image: "/assets/Images/items.png", info: "High-quality sound with noise-canceling mic." },
-    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "$ 149,90", newPrice: "$ 119,90", discount: "20%", image: "/assets/Images/items2.png", info: "Ergonomic design for long gaming sessions." },
+    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "$ 149,90", newPrice: "$ 119,90", discount: "20%", image: "/assets/Images/items5.png", info: "Ergonomic design for long gaming sessions." },
     { id: 3, name: "MANDO XBOX CONTROLLER", oldPrice: "$ 54,99", newPrice: "$ 44,99", discount: "18%", image: "/assets/Images/items3.png", info: "Wireless controller with responsive buttons." },
     { id: 4, name: "PC GAMING NEOHEO105", oldPrice: "$ 899,99", newPrice: "$ 799,99", discount: "11%", image: "/assets/Images/items4.png", info: "High-performance gaming PC with RTX graphics." }
   ];
