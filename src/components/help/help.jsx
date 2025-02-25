@@ -77,6 +77,7 @@ const Help = () => {
               value={formData.name}
               onChange={handleChange}
               className={styles.inputField}
+              required
             />
             <input
               type="email"
