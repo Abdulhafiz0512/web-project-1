@@ -22,20 +22,68 @@ GameGeek is an e-commerce website specializing in gaming products, with a focus 
 GameGeek/
 │── src/
 │   │── components/
-│   │   │── ProductList.js
-│   │   │── Cart.js
-│   │   │── Filters.js
-│   │   │── Header.js
-│   │   │── Footer.js
-│   │── pages/
-│   │   │── Home.js
-│   │   │── About.js
-│   │   │── CartPage.js
-│   │── styles/
-│   │   │── styles.css
+│   │   │── about/
+│   │   │   │── About.css
+│   │   │   │── about.jsx
+│   │   │── aside/
+│   │   │   │── Sidebar.jsx
+│   │   │   │── sidebar.module.css
+│   │   │── brands/
+│   │   │   │── brands.jsx
+│   │   │   │── brands.module.css
+│   │   │── cart/
+│   │   │   │── Cart.jsx
+│   │   │   │── cart.module.css
+│   │   │── filter/
+│   │   │   │── Filter.jsx
+│   │   │   │── filter.module.css
+│   │   │── footer/
+│   │   │   │── Footer.jsx
+│   │   │   │── footer.module.css
+│   │   │── header/
+│   │   │   │── Header.jsx
+│   │   │   │── header.module.css
+│   │   │── help/
+│   │   │   │── help.jsx
+│   │   │   │── help.module.css
+│   │   │── hero/
+│   │   │   │── banner.png
+│   │   │   │── Hero.jsx
+│   │   │   │── hero.module.css
+│   │   │── nav/
+│   │   │   │── Nav.jsx
+│   │   │   │── nav.module.css
+│   │   │── new/
+│   │   │   │── new.jsx
+│   │   │── ProductDetails/
+│   │   │   │── ProductDetails.jsx
+│   │   │   │── productDetails.module.css
+│   │   │── ProductList/
+│   │   │   │── productList.jsx
+│   │   │   │── productList.module.css
+│   │   │── sales/
+│   │   │   │── sales.jsx
+│   │── store/
+│   │   │── cartSlice.js
+│   │   │── headphonesSlice.js
+│   │   │── store.js
+│   │── App.css
+│   │── App.js
+│   │── App.test.js
+│   │── index.css
+│   │── index.js
+│   │── logo.svg
+│   │── reportWebVitals.js
+│   │── setupTests.js
+│── content/
+│── design/
 │── public/
 │── package.json
+│── package-lock.json
 │── README.md
+│── DEVELOPMENT_TIMELINE.md
+│── .gitignore
+
 ```
 
 ## Installation
