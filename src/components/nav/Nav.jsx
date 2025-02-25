@@ -10,7 +10,6 @@ export default function Nav() {
         <ul className={style.links}>
           <li><a href="/">Categories</a></li>
           <li><a href="/brands">Brands</a></li>
-          <li><a href="/new">What's new</a></li>
           <li><a href="/sales">Sales</a></li>
           <li><a href="/help">Help</a></li>
           <li><a href="/about">About</a></li>
