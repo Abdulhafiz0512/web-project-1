@@ -115,12 +115,12 @@ GameGeek/
 - Click "Add to Cart" to add items (button turns gray when added).
 - View selected items in the cart page.
 - Adjust product quantities using "+" and "-" buttons.
-- Remove items from the cart using the "-" button.
+- Remove items from the cart using the "x" button.
 - Click "Clear Cart" to empty the cart.
 - Click "Proceed to Checkout" (currently inactive).
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the License.
 
 ## Contact
 For any inquiries, reach out via:
