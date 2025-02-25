@@ -39,17 +39,17 @@ const Sales = () => {
   };
 
   const discountedProducts = [
-    { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "99,99 €", newPrice: "79,99 €", discount: "20%", image: "/assets/Images/items5.png" },
-    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "149,90 €", newPrice: "119,90 €", discount: "20%", image: "/assets/Images/items.png" },
-    { id: 3, name: "MANDO XBOX CONTROLLER", oldPrice: "54,99 €", newPrice: "44,99 €", discount: "18%", image: "/assets/Images/items2.png" },
-    { id: 4, name: "PC GAMING NEOHEO105", oldPrice: "899,99 €", newPrice: "799,99 €", discount: "11%", image: "/assets/Images/items3.png" }
+    { id: 1, name: "LOGITECH GAMING HEADSET", oldPrice: "$ 99,99", newPrice: "$ 79,99", discount: "20%", image: "/assets/Images/items5.png" },
+    { id: 2, name: "CHAIR GAMING MGCPROFBL", oldPrice: "$ 149,90", newPrice: "$ 119,90", discount: "20%", image: "/assets/Images/items.png" },
+    { id: 3, name: "MANDO XBOX CONTROLLER", oldPrice: "$ 54,99", newPrice: "$ 44,99", discount: "18%", image: "/assets/Images/items2.png" },
+    { id: 4, name: "PC GAMING NEOHEO105", oldPrice: "$ 899,99", newPrice: "$ 799,99", discount: "11%", image: "/assets/Images/items3.png" }
   ];
 
   const moreDeals = [
-    { id: 5, name: "GAMING KEYBOARD RGB", oldPrice: "69,99 €", newPrice: "49,99 €", discount: "29%", image: "/assets/Images/items6.png" },
-    { id: 6, name: "GAMING MOUSE PRO", oldPrice: "59,99 €", newPrice: "39,99 €", discount: "33%", image: "/assets/Images/items7.png" },
-    { id: 7, name: "ULTRA HD GAMING MONITOR", oldPrice: "399,99 €", newPrice: "349,99 €", discount: "13%", image: "/assets/Images/items8.png" },
-    { id: 8, name: "GAMING DESK SETUP", oldPrice: "499,99 €", newPrice: "429,99 €", discount: "14%", image: "/assets/Images/items9.png" }
+    { id: 5, name: "GAMING KEYBOARD RGB", oldPrice: "$ 69,99", newPrice: "$ 49,99", discount: "29%", image: "/assets/Images/items6.png" },
+    { id: 6, name: "GAMING MOUSE PRO", oldPrice: "$ 59,99", newPrice: "$ 39,99", discount: "33%", image: "/assets/Images/items7.png" },
+    { id: 7, name: "ULTRA HD GAMING MONITOR", oldPrice: "$ 399,99", newPrice: "$ 349,99", discount: "13%", image: "/assets/Images/items8.png" },
+    { id: 8, name: "GAMING DESK SETUP", oldPrice: "$ 499,99", newPrice: "$ 429,99", discount: "14%", image: "/assets/Images/items9.png" }
   ];
 
   return (
