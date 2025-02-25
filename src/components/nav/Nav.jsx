@@ -9,7 +9,7 @@ export default function Nav() {
         <Link to={"/"}> <img src="/assets/icons/GameGeek.svg" alt="" /></Link>
         <ul className={style.links}>
           <li><a href="/brands">Brands</a></li>
-          <li><a href="/sales">Sales</a></li>
+          {/*<li><a href="/sales">Sales</a></li>*/}
           <li><a href="/help">Help</a></li>
           <li><a href="/about">About</a></li>
         </ul>
