@@ -63,6 +63,7 @@ GameGeek/
 │   │   │   │── productList.module.css
 │   │   │── sales/
 │   │   │   │── sales.jsx
+│   │   │   │── sales.module.jsx
 │   │── store/
 │   │   │── cartSlice.js
 │   │   │── headphonesSlice.js
