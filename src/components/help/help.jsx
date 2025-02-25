@@ -10,7 +10,7 @@ const countries = [
   { code: "+91", name: "India", flag: "https://flagcdn.com/w20/in.png" },
   { code: "+81", name: "Japan", flag: "https://flagcdn.com/w20/jp.png" },
   { code: "+61", name: "Australia", flag: "https://flagcdn.com/w20/au.png" },
-  { code: "+86", name: "China", flag: "https://flagcdn.com/w20/cn.png" },
+  { code: "+86", name: "China", flag: "https://flagcdn.com/w20/cn.png" }
 ];
 
 const Help = () => {
@@ -19,11 +19,12 @@ const Help = () => {
     email: "",
     phone: "",
     comment: "",
-    countryCode: countries[0].code,
+    countryCode: countries[0].code
   });
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,50 +36,70 @@ const Help = () => {
     setIsDropdownOpen(false);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    setShowSuccessMessage(true);
-    setTimeout(() => setShowSuccessMessage(false), 3000);
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) newErrors.name = "Name is required.";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{7,15}$/.test(formData.phone.replace(/\D/g, ""))) {
+      newErrors.phone = "Invalid phone number.";
+    }
+
+    return newErrors;
   };
 
-  const selectedCountry = countries.find(
-    (country) => country.code === formData.countryCode
-  );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      console.log("Form submitted:", formData);
+      setShowSuccessMessage(true);
+      setFormData({ name: "", email: "", phone: "", comment: "", countryCode: countries[0].code });
+      setErrors({});
+      setTimeout(() => setShowSuccessMessage(false), 3000);
+    }
+  };
+
+  const selectedCountry = countries.find(country => country.code === formData.countryCode);
 
   return (
     <div className={styles.helpContainer}>
       <h2 className={styles.helpTitle}>Need Help?</h2>
-      <p className={styles.helpText}>
-        We're here to assist you with anything you need. Explore the topics
-        below or contact our support team directly.
-      </p>
+      <p className={styles.helpText}>We're here to assist you with anything you need. Explore the topics below or contact our support team directly.</p>
+
       <div className={styles.faqSection}>
         <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
         <ul className={styles.faqList}>
           <li className={styles.faqItem}><strong>How do I track my order?</strong><br />You can track your order by logging into your account and visiting the 'Shopping Cart' section.</li>
           <li className={styles.faqItem}><strong>What is your return policy?</strong><br />We offer a 30-day return policy on all items. Please check our returns page for more details.</li>
-          <li className={styles.faqItem}><strong>How do I contact customer support?</strong><br />You can reach out to us via  directly at support@GameGeek.com.</li>
+          <li className={styles.faqItem}><strong>How do I contact customer support?</strong><br />You can reach out to us directly at support@GameGeek.com.</li>
         </ul>
       </div>
 
       <div className={styles.contactSection}>
         <h3 className={styles.contactTitle}>Still need help?</h3>
-        <p className={styles.contactText}>
-          Our support team is available Monday to Friday from 9 AM to 6 PM.
-        </p>
+        <p className={styles.contactText}>Our support team is available Monday to Friday from 9 AM to 6 PM.</p>
 
         <form className={styles.contactForm} onSubmit={handleSubmit}>
           <div className={styles.formRow}>
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="Name *"
               value={formData.name}
               onChange={handleChange}
               className={styles.inputField}
-              required
             />
+            {errors.name && <span className={styles.errorText} style={{ color: 'red' }}>{errors.name}</span>}
+
             <input
               type="email"
               name="email"
@@ -86,21 +107,14 @@ const Help = () => {
               value={formData.email}
               onChange={handleChange}
               className={styles.inputField}
-              required
             />
+            {errors.email && <span className={styles.errorText} style={{ color: 'red' }}>{errors.email}</span>}
           </div>
 
           <div className={styles.formRow}>
-            <div
-              className={styles.customSelect}
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
+            <div className={styles.customSelect} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
               <div className={styles.selectedOption}>
-                <img
-                  src={selectedCountry.flag}
-                  alt={selectedCountry.name}
-                  className={styles.flagIcon}
-                />
+                <img src={selectedCountry.flag} alt={selectedCountry.name} className={styles.flagIcon} />
                 {selectedCountry.code} ({selectedCountry.name})
               </div>
               {isDropdownOpen && (
@@ -111,11 +125,7 @@ const Help = () => {
                       className={styles.optionItem}
                       onClick={() => handleCountrySelect(country.code)}
                     >
-                      <img
-                        src={country.flag}
-                        alt={country.name}
-                        className={styles.flagIcon}
-                      />
+                      <img src={country.flag} alt={country.name} className={styles.flagIcon} />
                       {country.code} ({country.name})
                     </li>
                   ))}
@@ -124,14 +134,14 @@ const Help = () => {
             </div>
 
             <input
-              mtype="text"
+              type="text"
               name="phone"
-              placeholder="Phone number"
+              placeholder="Phone number *"
               value={formData.phone}
               onChange={handleChange}
               className={styles.inputField}
-              required
             />
+            {errors.phone && <span className={styles.errorText} style={{ color: 'red' }}>{errors.phone}</span>}
           </div>
 
           <textarea
@@ -141,13 +151,12 @@ const Help = () => {
             onChange={handleChange}
             className={styles.textArea}
           />
-          <button type="submit" className={styles.contactButton}>
-            Send
-          </button>
+
+          <button type="submit" className={styles.contactButton}>Send</button>
         </form>
 
         {showSuccessMessage && (
-          <div className={styles.successMessage}> Message Sent. Our Operators Will Reach Out To You Soon!</div>
+          <div className={styles.successMessage}>Message Sent. Our Operators Will Reach Out To You Soon!</div>
         )}
       </div>
     </div>
