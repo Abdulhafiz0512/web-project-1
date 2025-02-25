@@ -76,7 +76,11 @@ GameGeek/
 │   │── reportWebVitals.js
 │   │── setupTests.js
 │── content/
+│   │── README.md
+│   │── TASKS.md
 │── design/
+│   │── README.md
+│   │── TASKS.md
 │── public/
 │── package.json
 │── package-lock.json
