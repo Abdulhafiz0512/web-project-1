@@ -22,30 +22,82 @@ GameGeek is an e-commerce website specializing in gaming products, with a focus 
 GameGeek/
 │── src/
 │   │── components/
-│   │   │── ProductList.js
-│   │   │── Cart.js
-│   │   │── Filters.js
-│   │   │── Header.js
-│   │   │── Footer.js
-│   │── pages/
-│   │   │── Home.js
-│   │   │── About.js
-│   │   │── CartPage.js
-│   │── styles/
-│   │   │── styles.css
+│   │   │── about/
+│   │   │   │── About.css
+│   │   │   │── about.jsx
+│   │   │── aside/
+│   │   │   │── Sidebar.jsx
+│   │   │   │── sidebar.module.css
+│   │   │── brands/
+│   │   │   │── brands.jsx
+│   │   │   │── brands.module.css
+│   │   │── cart/
+│   │   │   │── Cart.jsx
+│   │   │   │── cart.module.css
+│   │   │── filter/
+│   │   │   │── Filter.jsx
+│   │   │   │── filter.module.css
+│   │   │── footer/
+│   │   │   │── Footer.jsx
+│   │   │   │── footer.module.css
+│   │   │── header/
+│   │   │   │── Header.jsx
+│   │   │   │── header.module.css
+│   │   │── help/
+│   │   │   │── help.jsx
+│   │   │   │── help.module.css
+│   │   │── hero/
+│   │   │   │── banner.png
+│   │   │   │── Hero.jsx
+│   │   │   │── hero.module.css
+│   │   │── nav/
+│   │   │   │── Nav.jsx
+│   │   │   │── nav.module.css
+│   │   │── new/
+│   │   │   │── new.jsx
+│   │   │── ProductDetails/
+│   │   │   │── ProductDetails.jsx
+│   │   │   │── productDetails.module.css
+│   │   │── ProductList/
+│   │   │   │── productList.jsx
+│   │   │   │── productList.module.css
+│   │   │── sales/
+│   │   │   │── sales.jsx
+│   │── store/
+│   │   │── cartSlice.js
+│   │   │── headphonesSlice.js
+│   │   │── store.js
+│   │── App.css
+│   │── App.js
+│   │── App.test.js
+│   │── index.css
+│   │── index.js
+│   │── logo.svg
+│   │── reportWebVitals.js
+│   │── setupTests.js
+│── content/
+│   │── README.md
+│   │── TASKS.md
+│── design/
+│   │── README.md
+│   │── TASKS.md
 │── public/
 │── package.json
+│── package-lock.json
 │── README.md
+│── DEVELOPMENT_TIMELINE.md
+│── .gitignore
+
 ```
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/gamegeek.git
+   git clone https://github.com/Abdulhafiz0512/web-project-1
    ```
 2. Navigate to the project folder:
    ```bash
-   cd gamegeek
+   cd web-project-1
    ```
 3. Install dependencies:
    ```bash
@@ -66,16 +118,10 @@ GameGeek/
 - Click "Clear Cart" to empty the cart.
 - Click "Proceed to Checkout" (currently inactive).
 
-## Future Improvements
-- Implement a backend to store cart data persistently.
-- Enhance checkout functionality.
-- Improve UI/UX with additional animations and interactive elements.
-
 ## License
 This project is licensed under the MIT License.
 
 ## Contact
 For any inquiries, reach out via:
 - **Phone:** +4904-049-950
-- **Website:** [GameGeek](https://your-website-link.com)
 - **Social Media:** Twitter | LinkedIn | Facebook | Instagram
