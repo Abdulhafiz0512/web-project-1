@@ -8,7 +8,10 @@ import {
 } from "react-router-dom";
 import { store } from "./store/store";
 import ProductsList from "./components/ProductList/productList";
-import ProductDetails from "./components/ProductDetails/ProductDetails"; // Import the ProductDetails component
+import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Computers from "./components/computers/computers";
+import ComputerDetails from "./components/ComputerDetails/ComputerDetails";
+import AdminPanel from "./components/admin/AdminPanel";
 
 import "./App.css";
 import Header from "./components/header/Header";
@@ -19,6 +22,7 @@ import Filter from "./components/filter/Filter";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
 import { setBrands, setColors, setProducts } from "./store/headphonesSlice";
+import { setComputerBrands, setComputerColors, setComputers } from "./store/computersSlice";
 import About from "./components/about/about";
 import Sales from "./components/sales/sales";
 import New from "./components/new/new";
@@ -28,26 +32,69 @@ import Brands from "./components/brands/brands";
 function App() {
   const dispatch = useDispatch();
   const [sortBy, setSortBy] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+
   useEffect(() => {
-    fetch("https://headphones-server.onrender.com/colors")
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch(setColors(data));
-      });
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        const [
+          colorsResponse,
+          brandsResponse,
+          productsResponse,
+          computerColorsResponse,
+          computerBrandsResponse,
+          computersResponse
+        ] = await Promise.all([
+          fetch("https://headphones-server.onrender.com/colors"),
+          fetch("https://headphones-server.onrender.com/brands"),
+          fetch("https://headphones-server.onrender.com/products"),
+          fetch("https://headphones-server.onrender.com/computer-colors"),
+          fetch("https://headphones-server.onrender.com/computer-brands"),
+          fetch("https://headphones-server.onrender.com/computers")
+        ]);
 
-    fetch("https://headphones-server.onrender.com/brands")
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch(setBrands(data));
-      });
+        const [
+          colorsData,
+          brandsData,
+          productsData,
+          computerColorsData,
+          computerBrandsData,
+          computersData
+        ] = await Promise.all([
+          colorsResponse.json(),
+          brandsResponse.json(),
+          productsResponse.json(),
+          computerColorsResponse.json(),
+          computerBrandsResponse.json(),
+          computersResponse.json()
+        ]);
 
-    fetch("https://headphones-server.onrender.com/products")
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch(setProducts(data));
-      });
+        dispatch(setColors(colorsData));
+        dispatch(setBrands(brandsData));
+        dispatch(setProducts(productsData));
+        dispatch(setComputerColors(computerColorsData));
+        dispatch(setComputerBrands(computerBrandsData));
+        dispatch(setComputers(computersData));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, [dispatch]);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -66,6 +113,18 @@ function App() {
           <Route
             path="/product/:id"
             element={<ProductDetails></ProductDetails>}
+          />
+          <Route
+            path="/computers"
+            element={<Computers sortBy={sortBy} />}
+          />
+          <Route
+            path="/computer/:id"
+            element={<ComputerDetails />}
+          />
+          <Route
+            path="/admin"
+            element={<AdminPanel />}
           />
         </Routes>
       </div>
