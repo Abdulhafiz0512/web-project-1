@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./productDetails.module.css";
 import { addToCart } from "../../store/cartSlice";
@@ -8,31 +8,44 @@ const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.headphones.products);
+  console.log(products, id);
   const [buttonText, setButtonText] = useState("Add to Cart");
   const [isAdded, setIsAdded] = useState(false);
-  const product = products.find((prod) => prod.id === parseInt(id));
+  const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
+  useEffect(() => {
+    if (products && products.length > 0) {
+      const foundProduct = products.find((prod) => prod.id == parseInt(id));
+      setProduct(foundProduct);
+    }
+  }, [products, id]);
+
   if (!product) {
-    return <div className={styles.error}>Product not found.</div>;
+    return (
+      <div className={styles.error}>
+        <h2>Product not found</h2>
+        <p>The product you are looking for does not exist or has been removed.</p>
+        <Link to="/" className={styles.backLink}>Return to Home</Link>
+      </div>
+    );
   }
+
   const handleIncrease = () => {
-    setQuantity(quantity+1);
+    setQuantity(quantity + 1);
   };
 
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(quantity-1);
+      setQuantity(quantity - 1);
     }
   };
 
-  
   const handleAddToCart = () => {
-    dispatch(addToCart({ pr:product, quan:quantity }));
+    dispatch(addToCart({ pr: product, quan: quantity }));
     setButtonText("Added!");
     setIsAdded(true);
 
-    // Reset the button after 2 seconds
     setTimeout(() => {
       setButtonText("Add to Cart");
       setIsAdded(false);
@@ -42,7 +55,7 @@ const ProductDetails = () => {
   return (
     <div className={styles.productDetails}>
       <div className={styles.breadcrumb}>
-        <span>Categories / <a href="/">Gaming Headsets & Audio</a> / </span>
+        <span>Categories / <Link to="/">Gaming Headsets & Audio</Link> / </span>
         <span className={styles.productName}>{product.name}</span>
       </div>
 
@@ -62,8 +75,8 @@ const ProductDetails = () => {
           <h1 className={styles.productTitle}>{product.name}</h1>
           <p className={styles.productSubtitle}>{product.description}</p>
           <div className={styles.productRating}>
-            {/* Assuming there's a rating value */}
-            <span>★★★★☆</span>
+            <span>{"★".repeat(Math.floor(product.ratings_stars))}</span>
+            <span>{"☆".repeat(5 - Math.floor(product.ratings_stars))}</span>
             <span>({product.rating_counts})</span>
           </div>
           <div className={styles.dottedLine}></div>
@@ -100,7 +113,6 @@ const ProductDetails = () => {
               <input
                 type="text"
                 value={quantity}
-               
                 readOnly
                 className={styles.quantityInput}
               />
